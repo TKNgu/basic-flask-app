@@ -1,4 +1,7 @@
 from flask import Flask, render_template
+import logging
+from datetime import date
+
 app = Flask(__name__)
 
 # two decorators, same function
@@ -16,4 +19,5 @@ def myth():
     return render_template('myth.html', the_title='Tiger in Myth and Legend')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+	logging.basicConfig(filename='log/start.log',level=logging.DEBUG)
+	app.run(debug=True)
