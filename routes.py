@@ -19,5 +19,5 @@ def myth():
     return render_template('myth.html', the_title='Tiger in Myth and Legend')
 
 if __name__ == '__main__':
-	logging.basicConfig(filename='log/start.log',level=logging.DEBUG)
-	app.run(debug=True)
+	# logging.basicConfig(filename='log/start.log',level=logging.DEBUG)
+	app.run(host='0.0.0.0', debug=True)
